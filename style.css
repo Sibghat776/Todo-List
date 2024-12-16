@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: gray;
+    overflow-x: hidden;
+}
+
+.main {
+    min-height: fit-content;
+    height: 70%;
+    width: 60%;
+    background-color: white;
+    box-shadow: 6px 6px 4px #124e66;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    flex-direction: column;
+}
+
+.input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20%;
+    padding: 18px;
+    width: 65%;
+}
+
+.input>input {
+    height: 100%;
+    padding: 10px;
+    border: 2px solid black;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    width: 75%;
+    font-size: 1.2rem;
+}
+
+.input>button {
+    height: 100%;
+    padding: 10px 25px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: black;
+    color: white;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: 2px solid black;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s linear;
+}
+
+.input>button:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+.listItem {
+    height: 10%;
+    width: 80%;
+    background-color: black;
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.btns>button {
+    padding: 5px 20px;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+    transition: all 0.2s ease-in;
+}
+
+.btns>button:hover {
+    background-color: white;
+    border: 2px solid #124e66;
+    color: black;
+    cursor: pointer;
+}
