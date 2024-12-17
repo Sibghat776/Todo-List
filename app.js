@@ -11,6 +11,7 @@ function submitHandler() {
         <div class="btns">
         <button onclick="editHandler(this)">Edit</button>
         <button onclick="deleteHandler(this)">Delete</button>
+        <button onclick="doneHandler(this)"> Done </button>
         </div>`
     main.appendChild(myDiv)
     myInput.value = ''
@@ -38,11 +39,11 @@ function editHandler(btn) {
 
     // Mark this list item as being edited
     listItem.setAttribute("data-editing", "true");
+    console.log(listItem)
 }
 function updateHandler() {
     // Find the list item currently being edited
     let editingItem = document.querySelector('[data-editing="true"]');
-
     if (editingItem) {
         let myText = editingItem.querySelector("#text"); // Find its text element
         let myInput = document.querySelector("#myInput"); // Input field
@@ -62,7 +63,17 @@ function updateHandler() {
         editingItem.removeAttribute("data-editing");
     }
 }
-
+function doneHandler(listElem) {
+    let listItem = listElem.closest(".listItem")
+    console.log(listItem)
+    listItem.style.backgroundColor = "Green"
+    let btnEdit = listElem.parentElement.children[0]
+    let btnDel = listElem.parentElement.children[1]
+    btnDel.remove()
+    btnEdit.remove()
+    console.log(btnDel)
+    console.log(btnEdit)
+}
 // function editHandler(oneBtn) {
 //     console.log("Checking Ho rha ha edit handler")
 //     let myInput = document.querySelector("#myInput")
